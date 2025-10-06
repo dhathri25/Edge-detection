@@ -4,15 +4,29 @@
   <meta charset="UTF-8">
   <title>Edge Detection Viewer</title>
   <style>
-    body { font-family: sans-serif; text-align: center; background: #f0f0f0; }
-    img { max-width: 90%; margin-top: 20px; border: 2px solid #333; }
-    #stats { margin-top: 10px; font-size: 14px; color: #555; }
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #f0f0f0;
+    }
+    img {
+      max-width: 90%;
+      margin-top: 20px;
+      border: 2px solid #333;
+      width: 100px;
+      height: 100px;
+    }
+    #stats {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
   </style>
 </head>
 <body>
   <h1>Processed Frame Viewer</h1>
   <img id="processedImage" src="" alt="Processed Frame">
   <div id="stats">FPS: -- | Resolution: --</div>
-  <script src="viewer.js"></script>
+<script src="viewer.js"></script>
 </body>
 </html>
