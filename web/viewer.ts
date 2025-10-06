@@ -1,12 +1,18 @@
-const imageElement = document.getElementById("processedImage") as HTMLImageElement;
-const statsElement = document.getElementById("stats") as HTMLDivElement;
+window.onload = () => {
+  const imageElement = document.getElementById("processedImage") as HTMLImageElement;
+  const statsElement = document.getElementById("stats") as HTMLDivElement;
 
-// Simulated base64 image (replace with actual output from Android)
-const base64Image = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..."; // truncated
+  const images: string[] = ["nika.png", "nika2.png"];
+  let index: number = 0;
 
-// Simulated stats
-const fps = 15;
-const resolution = "640x480";
+  setInterval(() => {
+    const currentImage = images[index % images.length];
+    const fps: number = 15 + index;
+    const resolution: string = "1920x1080";
 
-imageElement.src = base64Image;
-statsElement.textContent = `FPS: ${fps} | Resolution: ${resolution}`;
+    imageElement.src = currentImage;
+    statsElement.textContent = `FPS: ${fps} | Resolution: ${resolution}`;
+
+    index++;
+  }, 1000);
+};
